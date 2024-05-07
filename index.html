@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -11,9 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css"/>
     <script src="script.js" defer></script>
-
 </head>
-<body>
+<body style="height: 100vh">
     <div class="aboutme">
         <img src="./images/headshot.jpg" alt="Headshot" width="200" height="300">
         <div class="sawarabi-mincho-regular">
@@ -36,10 +34,11 @@
     <div class="footer">
         <div class="navicons">
             <img src="./images/logos/smugface.png" alt="About me" width="50" height="50">
-            <img src="./images/logos/skills.png" alt="Skills" width="50" height="50">
+            <img src="./images/logos/skills.png" alt="Skills" width="50" height="50" onclick="toggleWindow()">
             <img src="./images/logos/resume.png" alt="Resume" width="50" height="50">
         </div>
     </div>
-
+    <div class="window" id="skillsWindow">
+    </div>
 </body>
 </html>

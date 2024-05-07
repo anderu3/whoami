@@ -13,3 +13,27 @@ toggleButton.addEventListener('click', function() {
         toggleButton.textContent = 'Ratings Explained';
     }
 });
+
+
+function toggleWindow() {
+    const windowElement = document.getElementById('skillsWindow');
+    if (windowElement.style.display === 'none') {
+        // Show window
+        windowElement.style.display = 'block';
+        windowElement.classList.remove('minimize');
+        windowElement.classList.add('restore');
+
+        // Load content from skills.html
+        fetch('skills.html')
+            .then(response => response.text())
+            .then(html => windowElement.innerHTML = html)
+            .catch(error => console.error('Error loading skills.html:', error));
+    } else {
+        // Hide window
+        windowElement.classList.remove('restore');
+        windowElement.classList.add('minimize');
+        setTimeout(() => {
+            windowElement.style.display = 'none';
+        }, 300); // Adjust the delay to match the transition duration
+    }
+}

@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    height: 100vh;
     margin: 0;
     overflow: hidden;
     padding: 10%;
@@ -57,6 +56,7 @@ body {
   width: 20%;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 15px;
 }
 
 .skillsetcontainer {
@@ -109,19 +109,60 @@ li {
     opacity: .3;
 }
 
-.content {
-    margin-bottom: 20px;
-}
-
 .more-info-container {
-    margin-top: 10px; 
-
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 48px;
 }
 
 .more-info {
+    font-family: "Sawarabi Mincho", serif;
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
     margin-left: 5px;
     background-color: rgb(218, 192, 145)
+}
+
+
+.window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; /* Adjust the size as needed */
+    height: 400px; /* Adjust the size as needed */
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    display: none; /* Initially hidden */
+    z-index: 9999; /* Ensure it's above other content */
+}
+
+/* CSS for the animation */
+@keyframes zoomIn {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.minimize {
+    animation: zoomIn 0.3s ease-in-out forwards;
+}
+
+.restore {
+    animation: zoomOut 0.3s ease-in-out forwards;
 }
