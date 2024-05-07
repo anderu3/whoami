@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 10%;
     width: 80%;
     display: flex;
@@ -126,21 +126,20 @@ li {
 
 
 .window {
-    position: fixed;
-    top: 50%;
+    position: fixed;   
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px; /* Adjust the size as needed */
-    height: 400px; /* Adjust the size as needed */
+    width: 80%; 
+    height: 70%; 
     background-color: #f0f0f0;
     border: 2px solid #ccc;
     border-radius: 8px;
     padding: 20px;
-    display: none; /* Initially hidden */
-    z-index: 9999; /* Ensure it's above other content */
+    display: none; 
+    z-index: 9999; 
 }
 
-/* CSS for the animation */
 @keyframes zoomIn {
     0% {
         transform: translate(-50%, -50%) scale(1);

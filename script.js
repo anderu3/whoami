@@ -7,10 +7,10 @@ toggleButton.addEventListener('click', function() {
     // Toggle the visibility of the additional text
     if (moreInfo.style.display === 'none') {
         moreInfo.style.display = 'block';
-        toggleButton.textContent = 'Ratings Explained';
+        toggleButton.textContent = '\u261F Ratings Explained';
     } else {
         moreInfo.style.display = 'none';
-        toggleButton.textContent = 'Ratings Explained';
+        toggleButton.textContent = '\u261E Ratings Explained';
     }
 });
 
@@ -24,7 +24,7 @@ function toggleWindow() {
         windowElement.classList.add('restore');
 
         // Load content from skills.html
-        fetch('skills.html')
+        fetch('./skills.html')
             .then(response => response.text())
             .then(html => windowElement.innerHTML = html)
             .catch(error => console.error('Error loading skills.html:', error));
