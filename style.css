@@ -1,0 +1,127 @@
+html {
+    background-color: hwb(60 65% 29% / 0.631)
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutme {
+    display: flex;
+    justify-content: center;
+}
+
+.dm-serif-text-regular {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.dm-serif-text-regular-italic {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+.sawarabi-mincho-regular {
+    font-family: "Sawarabi Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 2em;
+    line-height: 2em;
+    font-size: 30px;
+  }
+
+.navicons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: .5em;
+}
+
+.footer {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 16px;
+  background: #807c7c79;
+  bottom: 1em;
+  position: fixed;
+  width: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skillsetcontainer {
+    padding: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.skillsetcard {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 300px;
+    border: 1px solid #eee;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 4px;
+    background-color: white;
+    font-family: "DM Serif Text", serif;
+}
+
+.skillsetcard h2 {
+    border-bottom: 4px solid rgb(163, 30, 30);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Sawarabi Mincho", serif;
+    margin-bottom: 16px;
+}
+
+.skillicons {
+    margin-left: auto;
+    height: auto;
+}
+
+.notknownskill {
+    opacity: .3;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.more-info-container {
+    margin-top: 10px; 
+
+}
+
+.more-info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-left: 5px;
+    background-color: rgb(218, 192, 145)
+}
