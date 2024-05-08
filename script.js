@@ -24,10 +24,11 @@ function toggleWindow() {
         windowElement.classList.add('restore');
 
         // Load content from skills.html
-        fetch('./skills.html')
+        fetch('skills.html')
             .then(response => response.text())
-            .then(html => windowElement.innerHTML = html)
+            .then(html => document.getElementById('skillsWindow').innerHTML = html)
             .catch(error => console.error('Error loading skills.html:', error));
+
     } else {
         // Hide window
         windowElement.classList.remove('restore');
