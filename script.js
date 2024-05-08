@@ -82,6 +82,7 @@ function toggleWindow(event, windowId, htmlFile) {
             .then(data => {
                 windowElement.innerHTML = data;
                 setupToggleButton();
+
             });
     } else {
         windowElement.classList.remove('restore');

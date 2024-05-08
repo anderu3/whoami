@@ -1,5 +1,5 @@
 html {
-    background-color: hwb(60 65% 29% / 0.631)
+    background-color: #fefae0;
 }
 
 body {
@@ -82,6 +82,7 @@ body {
     background-color: white;
     font-family: "DM Serif Text", serif;
     margin-bottom: 32px;
+    border-radius: 20px;
 }
 
 @media (max-width: 800px) {
@@ -109,11 +110,58 @@ body {
     margin-bottom: 16px;
 }
 
-h1, h2 {
+h1 {
     font-family: "DM Serif Text", serif;
     border-bottom: 4px solid rgb(163, 30, 30);
     padding-bottom: 8px;
     margin-left: 48px;
+}
+
+h3 {
+    font-family: "DM Serif Text", serif;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.anime-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 80em; 
+    margin: 0 auto; 
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 40px;
+    background-color: #8d99ae;
+    padding: 10px;
+}
+
+.anime-image {
+    border-radius: 50%; 
+    width: 12.5em;
+    height: 12.5em;
+    object-fit: cover;
+    border: .2em solid black;
+}
+
+.anime-item {
+    position: relative;
+    width: 12.5em;
+    height: 12.5em;
+    margin: 1.5em;
+}
+
+.anime-title {
+    font-family: "DM Serif Text", serif;
+    position: absolute;
+    top: -3em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #0a0908;
+    text-align: center;
+    font-size: 1em;
+    padding: 0.5em;
+    white-space: nowrap;
 }
 
 ul {
@@ -159,6 +207,8 @@ li {
     padding: 48px;
     padding-bottom: 0px;
     padding-top: 0px;
+    font-family: "Sawarabi Mincho", serif;
+    font-size: 16px;
 }
 
 .more-info {
@@ -169,7 +219,6 @@ li {
     margin-left: 5px;
     background-color: rgb(218, 192, 145)
 }
-
 
 .window {
     position: fixed;   
