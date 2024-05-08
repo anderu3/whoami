@@ -24,14 +24,14 @@ function setupToggleButton() {
 
 document.addEventListener('DOMContentLoaded', setupToggleButton);
 
-function addMinimizeWindowEventListener(windowId) {
+function minWindowEventListener(windowId) {
     if (!minimizeWindowFunction) {
-        minimizeWindowFunction = event => minimizeWindowOnClickOutside(event, windowId);
+        minimizeWindowFunction = event => clickOutsideToMinWindow(event, windowId);
     }
     document.addEventListener('click', minimizeWindowFunction);
 }
 
-function removeMinimizeWindowEventListener() {
+function rmMinWindowListener() {
     if (minimizeWindowFunction) {
         document.removeEventListener('click', minimizeWindowFunction);
         minimizeWindowFunction = null;
@@ -40,7 +40,7 @@ function removeMinimizeWindowEventListener() {
 
 document.addEventListener('DOMContentLoaded', setupToggleButton);
 
-function minimizeWindowOnClickOutside(event, windowId) {
+function clickOutsideToMinWindow(event, windowId) {
     const windowElement = document.getElementById(windowId);
     if (!windowElement.contains(event.target)) {
         windowElement.classList.remove('restore');
@@ -48,14 +48,14 @@ function minimizeWindowOnClickOutside(event, windowId) {
         setTimeout(() => {
             windowElement.style.display = 'none';
         }, 300); 
-        removeMinimizeWindowEventListener();
+        rmMinWindowListener();
     }
 }
 
 function toggleWindow(event, windowId, htmlFile) {
     event.stopPropagation();
     if (currentWindowId && currentWindowId !== windowId) {
-        removeMinimizeWindowEventListener();
+        rmMinWindowListener();
     }
 
     const windowElement = document.getElementById(windowId);
@@ -73,7 +73,7 @@ function toggleWindow(event, windowId, htmlFile) {
         windowElement.classList.remove('minimize');
         windowElement.classList.add('restore');
         setTimeout(() => {
-            addMinimizeWindowEventListener(windowId);
+            minWindowEventListener(windowId);
         }, 0);
         currentWindowId = windowId; 
 
