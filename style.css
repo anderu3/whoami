@@ -57,29 +57,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 15px;
+  user-select: none;
 }
-
-/* .skillsetcontainer {
-    padding: 48px;
-    padding-top: .5em;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 32px;
-}
-
-.skillsetcard {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 16px;
-    border: 1px solid #eee;
-    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
-    border-radius: 4px;
-    background-color: white;
-    font-family: "DM Serif Text", serif;
-    margin-bottom: 32px;
-} */
 
 
 .skillsetcontainer {
@@ -93,7 +72,7 @@ body {
 .skillsetcard {
     display: flex;
     flex-direction: column;
-    flex: 1 0 20%; /* Each card takes up 25% of the container width minus gap */
+    flex: 1 0 20%;
     padding: 16px;
     border: 1px solid #eee;
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
@@ -105,19 +84,19 @@ body {
 
 @media (max-width: 800px) {
     .skillsetcard {
-        flex: 0 0 calc(25% - 24px); /* Each card takes up 25% width minus 24px gap */
+        flex: 0 0 calc(25% - 24px); 
     }
 }
 
 @media (max-width: 600px) {
     .skillsetcard {
-        flex: 0 0 calc(50% - 32px); /* Each card takes up 50% width minus gap */
+        flex: 0 0 calc(50% - 32px); 
     }
 }
 
 @media (max-width: 400px) {
     .skillsetcard {
-        flex: 0 0 calc(100% - 32px); /* Each card takes up 100% width minus gap */
+        flex: 0 0 calc(100% - 32px); 
     }
 }
 
