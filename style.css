@@ -109,7 +109,7 @@ body {
     margin-bottom: 16px;
 }
 
-h1 {
+h1, h2 {
     font-family: "DM Serif Text", serif;
     border-bottom: 4px solid rgb(163, 30, 30);
     padding-bottom: 8px;
