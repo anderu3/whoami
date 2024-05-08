@@ -59,9 +59,11 @@ body {
   border-radius: 15px;
 }
 
-.skillsetcontainer {
+/* .skillsetcontainer {
     padding: 48px;
+    padding-top: .5em;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 32px;
 }
@@ -69,19 +71,68 @@ body {
 .skillsetcard {
     display: flex;
     flex-direction: column;
+    flex: 1;
     padding: 16px;
-    width: 300px;
     border: 1px solid #eee;
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
     border-radius: 4px;
     background-color: white;
     font-family: "DM Serif Text", serif;
+    margin-bottom: 32px;
+} */
+
+
+.skillsetcontainer {
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
 }
+
+.skillsetcard {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 20%; /* Each card takes up 25% of the container width minus gap */
+    padding: 16px;
+    border: 1px solid #eee;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 4px;
+    background-color: white;
+    font-family: "DM Serif Text", serif;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 800px) {
+    .skillsetcard {
+        flex: 0 0 calc(25% - 24px); /* Each card takes up 25% width minus 24px gap */
+    }
+}
+
+@media (max-width: 600px) {
+    .skillsetcard {
+        flex: 0 0 calc(50% - 32px); /* Each card takes up 50% width minus gap */
+    }
+}
+
+@media (max-width: 400px) {
+    .skillsetcard {
+        flex: 0 0 calc(100% - 32px); /* Each card takes up 100% width minus gap */
+    }
+}
+
 
 .skillsetcard h2 {
     border-bottom: 4px solid rgb(163, 30, 30);
     padding-bottom: 8px;
     margin-bottom: 16px;
+}
+
+h1 {
+    font-family: "DM Serif Text", serif;
+    border-bottom: 4px solid rgb(163, 30, 30);
+    padding-bottom: 8px;
+    margin-left: 48px;
 }
 
 ul {
@@ -101,8 +152,20 @@ li {
 }
 
 .skillicons {
+    display: flex;
+    justify-content: flex-start;
     margin-left: auto;
     height: auto;
+}
+
+.skillicons i {
+    flex: 0 0 auto; 
+    margin-right: 5px; 
+}
+
+.skillicons img {
+    flex: 0 0 auto; 
+    margin-right: 5px; 
 }
 
 .notknownskill {
@@ -110,9 +173,11 @@ li {
 }
 
 .more-info-container {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: .5em;
     padding: 48px;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 .more-info {
@@ -134,6 +199,7 @@ li {
     height: 70%; 
     background-color: #f0f0f0;
     border: 2px solid #ccc;
+    overflow: auto;
     border-radius: 8px;
     padding: 20px;
     display: none; 
