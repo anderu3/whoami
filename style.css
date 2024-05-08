@@ -40,20 +40,22 @@ body {
 
 .navicons {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
+    overflow-x: auto;
     gap: 25px;
     padding: .5em;
 }
 
 .footer {
   display: flex;
-  flex-grow: 1;
   justify-content: center;
   padding: 16px;
   background: #807c7c79;
   bottom: 1em;
   position: fixed;
-  width: 20%;
+  min-width: 20%;
+  max-width: 100%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 15px;

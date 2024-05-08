@@ -1,4 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+
+let currentWindowId;
+let isWindowVisible = false; 
+let minimizeWindowFunction;
+
+function setupToggleButton() {
     const toggleButton = document.querySelector('.toggle-button');
     const moreInfo = document.querySelector('.more-info');
 
@@ -13,30 +18,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     } else {
-        console.error('Toggle button or more info element not found.');
+        console.error('setupToggleButton() issue');
     }
-});
+}
 
-let currentWindowId;
-
-let isWindowVisible = false; 
-
-let minimizeWindowFunction;
+document.addEventListener('DOMContentLoaded', setupToggleButton);
 
 function addMinimizeWindowEventListener(windowId) {
-    minimizeWindowFunction = event => minimizeWindowOnClickOutside(event, windowId);
+    if (!minimizeWindowFunction) {
+        minimizeWindowFunction = event => minimizeWindowOnClickOutside(event, windowId);
+    }
     document.addEventListener('click', minimizeWindowFunction);
 }
 
 function removeMinimizeWindowEventListener() {
-    document.removeEventListener('click', minimizeWindowFunction);
+    if (minimizeWindowFunction) {
+        document.removeEventListener('click', minimizeWindowFunction);
+        minimizeWindowFunction = null;
+    }
 }
 
+document.addEventListener('DOMContentLoaded', setupToggleButton);
 
 function minimizeWindowOnClickOutside(event, windowId) {
     const windowElement = document.getElementById(windowId);
     if (!windowElement.contains(event.target)) {
-        console.log('Clicked outside window, minimizing...');
         windowElement.classList.remove('restore');
         windowElement.classList.add('minimize');
         setTimeout(() => {
@@ -48,8 +54,6 @@ function minimizeWindowOnClickOutside(event, windowId) {
 
 function toggleWindow(event, windowId, htmlFile) {
     event.stopPropagation();
-    console.log('Toggle window function called');
-
     if (currentWindowId && currentWindowId !== windowId) {
         removeMinimizeWindowEventListener();
     }
@@ -65,7 +69,6 @@ function toggleWindow(event, windowId, htmlFile) {
             }, 300);
         }
   
-        console.log('Showing window');
         windowElement.style.display = 'block';
         windowElement.classList.remove('minimize');
         windowElement.classList.add('restore');
@@ -78,9 +81,9 @@ function toggleWindow(event, windowId, htmlFile) {
             .then(response => response.text())
             .then(data => {
                 windowElement.innerHTML = data;
+                setupToggleButton();
             });
     } else {
-        console.log('Hiding window');
         windowElement.classList.remove('restore');
         windowElement.classList.add('minimize');
         setTimeout(() => {
