@@ -52,7 +52,14 @@ function clickOutsideToMinWindow(event, windowId) {
     }
 }
 
+
+function stopPulse() {
+    const footer = document.querySelector('.footer');
+    footer.classList.add('stop-pulse');
+}
+
 function toggleWindow(event, windowId, htmlFile) {
+    stopPulse();
     event.stopPropagation();
     if (currentWindowId && currentWindowId !== windowId) {
         rmMinWindowListener();
@@ -93,3 +100,4 @@ function toggleWindow(event, windowId, htmlFile) {
         currentWindowId = null;
     }
 }
+
