@@ -228,7 +228,9 @@ li {
     flex-wrap: wrap;
     padding: 5px;
     margin-left: 5px;
-    background-color: rgb(218, 192, 145)
+    margin-top: 20px;
+    background-color: rgb(218, 192, 145);
+    border-radius: 2em;
 }
 
 .window {
