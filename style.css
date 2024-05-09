@@ -47,15 +47,21 @@ body {
     padding: .5em;
 }
 
+.footericons {
+    background-color: white;
+    border-radius: 1em;
+    flex: 0 0 auto;
+}
+
 .footer {
   display: flex;
   justify-content: center;
   padding: 16px;
-  background: #807c7c79;
+  background: #dad7cd;
   bottom: 1em;
   position: fixed;
-  min-width: 20%;
-  max-width: 100%;
+  /* min-width: 20%;
+  max-width: 100%; */
   left: 50%;
   transform: translateX(-50%);
   border-radius: 15px;
