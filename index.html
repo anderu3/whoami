@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Lee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css"/>
+    <link rel="icon" href="./images/logos/favicon-16x16.png" type="image/x-icon">
+    <style>
+        @media (max-width: 1000px) {
+            .aboutme > * {
+                font-size: 1.5rem; 
+            }
+        }
+        @media (max-width: 700px) {
+            .aboutme > * {
+                font-size: 1rem; 
+            }
+        } 
+    </style>
+</head>
+<body style="height: 100vh; overflow: hidden; position: relative">
+    <div class="aboutme">
+        <img style="border-radius: 15px" src="./images/headshot.jpg" alt="Headshot" width="200" height="300">
+        <div class="sawarabi-mincho-regular">
+            Hello, I'm <span class="dm-serif-text-regular">Andrew Lee.</span> <br>
+            I'm a software engineer based in <span id="seattle" style="color:rgb(62, 62, 209);">Seattle, WA.</span><br>
+            Currently building my career from <a href="https://www.yearup.org/about" target="_blank"><img src="images/logos/Year_Up_logo_2023.png" alt="YearUp logo" width="100"></a>.<br>
+            <div class="navicons">
+                <a href="https://github.com/anderu3" target="_blank">
+                    <i class="ci ci-github ci-2x"></i>
+                </a>
+                <a href="mailto:anderu27@gmail.com" target="_blank">
+                    <i class="ci ci-gmail ci-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/andrew-lee-595710b2/" target="_blank">
+                    <i class="ci ci-linkedin ci-2x"></i>
+                </a>
+            </div>
+        </div>          
+    </div>
+    <div class="footer">
+        <div class="navicons">
+            <div class="footericon-container">
+                <img class="footericons" src="./images/logos/smugface.png" alt="About me" width="50" height="50" onclick="toggleWindow(event, 'aboutMeWindow', 'aboutme.html')">
+                <p class="icon-text">About</p>
+            </div>
+            <div class="footericon-container">
+                <img class="footericons" src="./images/logos/skills.png" alt="Skills" width="50" height="50" onclick="toggleWindow(event, 'skillsWindow', 'skills.html')">
+                <p class="icon-text">Skills</p>
+            </div>
+            <div class="footericon-container">
+                <img class="footericons" src="./images/logos/resume.png" alt="Resume" width="50" height="50" onclick="toggleWindow(event, 'resumeWindow', 'resume.html')">
+                <p class="icon-text">Resume</p>
+            </div>
+            <div class="footericon-container">
+                <img class="footericons" src="./images/logos/tinker.png" alt="Tinker" width="50" height="50" onclick="toggleWindow(event, 'tinkerWindow', 'projects.html')">
+                <p class="icon-text">Projects</p>
+            </div> 
+            <div class="footericon-container">
+                <img class="footericons" src="./images/logos/Trash-icon.png" alt="Trash can" width="50" height="50" onclick="toggleWindow(event, 'trashWindow', 'trash.html')">
+                <p class="icon-text">Trash</p>
+            </div>
+        </div>
+    </div>
+    <div class="window" id="aboutMeWindow"></div>
+    <div class="window" id="skillsWindow"></div>
+    <div class="window" id="resumeWindow"></div>
+    <div class="window" id="tinkerWindow"></div>
+    <div class="window" id="trashWindow"></div>
+    <script src="script.js"></script>
+</body>
+<!-- <canvas id="rainCanvas"></canvas> -->
+</html>
