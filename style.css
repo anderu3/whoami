@@ -17,6 +17,11 @@ body {
     user-select: none;
 }
 
+#seattle {
+    cursor: pointer;
+}
+
+
 .seattle-background {
     background: url('./images/seattleblurred.jpg') no-repeat center 10% fixed; 
     -webkit-background-size: cover;
@@ -177,7 +182,7 @@ h3 {
     white-space: nowrap;
 }
 
-ul {
+ul.skills {
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -185,7 +190,7 @@ ul {
     padding: 0;
 }
 
-li {
+ul.skills > li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -232,7 +237,7 @@ li {
     margin-left: 5px;
     margin-top: 20px;
     background-color: rgb(218, 192, 145);
-    border-radius: 2em;
+    border-radius: 1em;
 }
 
 .window {
@@ -277,6 +282,24 @@ li {
     animation: zoomOut 0.3s ease-in-out forwards;
 }
 
+
+.job-title {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.job-date {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.job-desc {
+    font-family: "Serif Text", serif;
+    position: relative;
+    margin-top: 0;
+}
 
 .dm-serif-text-regular {
     font-family: "DM Serif Text", serif;
