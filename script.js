@@ -32,17 +32,15 @@ document.getElementById('seattle').addEventListener('click', function() {
     var footericonbgs = document.querySelectorAll('.footericons');
     if (!isSeattleBackground) {
         body.classList.add('seattle-background');
-        seattleSpan.style.color = 'rgb(229, 151, 5)';
+        seattleSpan.classList.add('orange');
         footer.style.background = '#0096c7';
         footericonbgs.forEach(function(footericonbg) {
             footericonbg.style.background = '#48cae4';
         });
         isSeattleBackground = true;
-
-
     } else {
         body.classList.remove('seattle-background');
-        seattleSpan.style.color = 'rgb(62, 62, 209)';
+        seattleSpan.classList.remove('orange');
         footer.style.background = '#dad7cd';
         footericonbgs.forEach(function(footericonbg) {
             footericonbg.style.background = '#adb5bd';
@@ -50,7 +48,6 @@ document.getElementById('seattle').addEventListener('click', function() {
         isSeattleBackground = false;
     }
 });
-
 
 document.addEventListener('DOMContentLoaded', setupToggleButton);
 
@@ -103,6 +100,7 @@ function toggleWindow(event, windowId, htmlFile) {
         windowElement.style.display = 'block';
         windowElement.classList.remove('minimize');
         windowElement.classList.add('restore');
+        windowElement.scrollTop = 0;
         setTimeout(() => {
             minWindowEventListener(windowId);
         }, 0);

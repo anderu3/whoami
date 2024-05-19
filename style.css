@@ -19,6 +19,13 @@ body {
 
 #seattle {
     cursor: pointer;
+    color:rgb(62, 62, 209);
+}
+
+#seattle.orange {
+    cursor: pointer;
+    color: rgb(229, 151, 5);
+    text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
 }
 
 
@@ -296,7 +303,7 @@ ul.skills > li {
 }
 
 .job-desc {
-    font-family: "Serif Text", serif;
+    font-family: 'Times New Roman', Times, serif;
     position: relative;
     margin-top: 0;
 }
@@ -323,3 +330,5 @@ ul.skills > li {
     line-height: 2em;
     font-size: 30px;
   }
+
+
