@@ -25,7 +25,7 @@ body {
 #seattle.orange {
     cursor: pointer;
     color: rgb(229, 151, 5);
-    text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+    /* text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black; */
 }
 
 
