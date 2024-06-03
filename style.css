@@ -147,12 +147,18 @@ h3 {
     justify-content: center;
 }
 
+a, a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
 .anime-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: calc(100% - 250px);
     margin: 0 auto;
+    margin-top: 40px;
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
     border-radius: 40px;
     background-color: #8d99ae;
