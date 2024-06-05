@@ -6,9 +6,6 @@ let minimizeWindowFunction;
 let isSeattleBackground = false;
 let body = document.body;
 
-// const rainCanvas = document.getElementById('rainCanvas');
-// const rain = new Rain();
-
 function setupToggleButton() {
     const toggleButton = document.querySelector('.toggle-button');
     const moreInfo = document.querySelector('.more-info');
@@ -111,7 +108,6 @@ function toggleWindow(event, windowId, htmlFile) {
             .then(data => {
                 windowElement.innerHTML = data;
                 setupToggleButton();
-
             });
     } else {
         windowElement.classList.remove('restore');
